@@ -1,0 +1,37 @@
+/* All */
+* {
+  box-sizing: border-box;
+}
+
+/* Body */
+
+body {
+  background-color: #f7f7f9;
+}
+
+/* Nav-bar */
+
+header {
+  height: 48px;
+  display: flex;
+  background-color: #fff;
+  padding: 12px 24px;
+  justify-content: space-between;
+}
+
+header p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #6070FF;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.fa-bars {
+  color: #6070FF;
+}
