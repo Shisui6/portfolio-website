@@ -20,6 +20,10 @@ header {
   justify-content: space-between;
 }
 
+header a {
+  text-decoration: none;
+}
+
 header p {
   font-weight: 700;
   font-size: 18px;
