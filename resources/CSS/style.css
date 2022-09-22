@@ -42,7 +42,7 @@ button {
 
 /* Intro Section */
 
-#intro-section {
+.intro-section {
   height: 604px;
   background-image: url('../images/intro-background.jpg');
   background-size: cover;
@@ -50,7 +50,7 @@ button {
   padding: 114px 24px;
 }
 
-#intro-section h1 {
+.intro-section h1 {
   font-size: 40px;
   font-weight: 700;
   line-height: 52px;
@@ -72,7 +72,96 @@ button {
   margin-bottom: 12px;
 }
 
-#intro-section li {
+.intro-section li {
   display: inline-block;
   margin-right: 15px;
+}
+
+/* Intro Section */
+
+.projects-section {
+  display: grid;
+  grid-template-rows: 552px 552px 552px;
+  gap: 88px;
+  padding: 114px 24px;
+}
+
+.project img {
+  margin-bottom: 12px;
+}
+
+.project {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.project h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
+  margin-bottom: 12px;
+}
+
+.project-type {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.project-type > h3,
+.project-type > img,
+.project-type > h4 {
+  margin-right: 12px;
+}
+
+.text-font {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.project-type h3 {
+  color: #344563;
+}
+
+.project h4 {
+  color: #7a869a;
+}
+
+.project p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #344563;
+  margin-bottom: 16px;
+}
+
+.project ul {
+  margin-bottom: 36px;
+}
+
+.project li {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: #ebebff;
+  border-radius: 8px;
+  color: #6070ff;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  margin-right: 8px;
+}
+
+.project a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #396df2;
+  border: 1px solid #6070ff;
+  border-radius: 8px;
+  padding: 12px;
 }
