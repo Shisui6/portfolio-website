@@ -285,14 +285,14 @@ footer {
   right: 0;
   top: 10px;
   width: 220px;
-  height: 709px;
+  height: 747px;
 }
 
 form {
   margin-top: 50px;
 }
 
-input[type='text'],
+input[type=text],
 input[type='email'] {
   border: 1px solid #cfd8dc;
   border-radius: 8px;
@@ -319,7 +319,7 @@ textarea {
   padding: 15px 16px;
 }
 
-input[type='submit'] {
+input[type=submit] {
   background: #fff;
   border-radius: 8px;
   padding: 12px 16px;
@@ -333,4 +333,15 @@ input[type='submit'] {
   margin-top: 22px;
   left: 0;
   line-height: 24px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #4753c2;
+  color: #fff;
+}
+
+input[type=submit]:active {
+  background-color: #2230d2;
+  color: #fff;
 }
