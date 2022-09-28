@@ -20,6 +20,11 @@ header {
   background-color: #fff;
   padding: 14px 24px;
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: 0 8px 16px rgba(230, 232, 247, 0.1);
+  z-index: 1;
 }
 
 header a {
@@ -55,6 +60,8 @@ header li {
   background-size: cover;
   border-bottom-left-radius: 100px;
   padding: 114px 24px;
+  height: 100vh;
+  margin-top: 48px;
 }
 
 .intro-h1 {
@@ -91,7 +98,7 @@ ul {
 
 .projects-section {
   display: grid;
-  grid-template-rows: 558px 558px 558px 558px;
+  grid-template-rows: 555px 575px 555px 575px;
   gap: 88px;
   padding: 114px 24px;
 }
@@ -100,6 +107,24 @@ ul {
   background-color: #fff;
   border-radius: 16px;
   padding: 16px;
+  display: grid;
+  grid-template-rows: 220px 288px;
+}
+
+#project-img1 {
+  background-image: url('../images/project-1.png');
+}
+
+#project-img2 {
+  background-image: url('../images/project-2.png');
+}
+
+#project-img3 {
+  background-image: url('../images/project-3.png');
+}
+
+#project-img4 {
+  background-image: url('../images/project-4.png');
 }
 
 .project h2 {
@@ -107,8 +132,8 @@ ul {
   font-size: 32px;
   line-height: 44px;
   color: #172b4d;
-  margin-top: 8px;
   margin-bottom: 0;
+  margin-top: 12px;
 }
 
 .project-type {
@@ -196,6 +221,7 @@ ul {
   padding: 114px 24px;
   padding-bottom: 80px;
   border-top-right-radius: 90px;
+  display: grid;
 }
 
 .about {
@@ -323,7 +349,6 @@ textarea {
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
-  z-index: 5;
   width: 100%;
   padding: 15px 16px;
 }
@@ -340,7 +365,6 @@ input[type=submit] {
   font-size: 17px;
   border: none;
   margin-top: 22px;
-  left: 0;
   line-height: 24px;
   cursor: pointer;
 }
@@ -362,6 +386,7 @@ input[type=submit]:active {
     padding: 25px 12%;
     justify-content: space-between;
     align-items: center;
+    height: 72px;
   }
 
   header nav {
@@ -370,5 +395,70 @@ input[type=submit]:active {
 
   header li {
     display: inline-block;
+  }
+
+  .intro-section {
+    background-color: #fff;
+    background-image: url('../images/desktop-intro.png');
+    background-size: 96% 85%;
+    background-repeat: no-repeat;
+    background-position: 45px 20px;
+    margin-top: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .intro-content {
+    width: 62%;
+  }
+
+  .projects-section {
+    grid-template-rows: 496px 496px 496px 496px;
+    gap: 142px;
+    padding: 142px;
+  }
+
+  .project {
+    padding: 24px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 46px;
+  }
+
+  #project-img1 {
+    background-image: url('../images/desktop-1.png');
+    background-size: 100% 100%;
+  }
+
+  #project-img2 {
+    background-image: url('../images/desktop-2.png');
+    background-size: 100% 100%;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  #project-img3 {
+    background-image: url('../images/desktop-3.png');
+    background-size: 100% 100%;
+  }
+
+  #project-img4 {
+    background-image: url('../images/desktop-4.png');
+    background-size: 100% 100%;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .project-type {
+    margin-bottom: 10px;
+  }
+
+  .project p {
+    margin-bottom: 25px;
+  }
+
+  .project ul {
+    margin-bottom: 50px;
   }
 }
