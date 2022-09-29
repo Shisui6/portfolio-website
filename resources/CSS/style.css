@@ -3,6 +3,12 @@
   box-sizing: border-box;
 }
 
+/* HTML */
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* Body */
 
 body {
@@ -28,7 +34,7 @@ header {
   z-index: 1;
 }
 
-header a {
+.logo {
   text-decoration: none;
   font-weight: 700;
   font-size: 18px;
@@ -41,12 +47,26 @@ button {
   border: none;
 }
 
-header li {
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+header ul {
   display: none;
+}
+
+header li {
+  display: inline-block;
   margin-right: 32px;
   font-weight: 500;
   font-size: 15px;
   line-height: 20px;
+  color: #344563;
+}
+
+header li a {
+  text-decoration: none;
   color: #344563;
 }
 
@@ -83,11 +103,6 @@ header li {
 .connect {
   font-weight: 500;
   color: #7f8cff;
-}
-
-ul {
-  padding: 0;
-  list-style: none;
 }
 
 .intro-section li {
@@ -394,12 +409,12 @@ input[type=submit]:active {
     height: 72px;
   }
 
-  header nav {
+  header button {
     display: none;
   }
 
-  header li {
-    display: inline-block;
+  header ul {
+    display: block;
   }
 
   .intro-section {
