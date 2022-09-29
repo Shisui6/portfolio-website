@@ -110,6 +110,19 @@ header li a {
   margin-right: 15px;
 }
 
+.intro-content {
+  animation: fadeIn 2s;
+  animation-delay: 0.7s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
 /* Projects Section */
 
 .projects-section {
