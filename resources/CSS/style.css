@@ -10,6 +10,7 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
+  min-width: 338px;
 }
 
 /* Nav-bar */
@@ -98,7 +99,7 @@ ul {
 
 .projects-section {
   display: grid;
-  grid-template-rows: 555px 575px 555px 575px;
+  grid-template-rows: 1fr 1.05fr 1fr 1.05fr;
   gap: 88px;
   padding: 114px 24px;
 }
@@ -106,25 +107,29 @@ ul {
 .project {
   background-color: #fff;
   border-radius: 16px;
-  padding: 16px;
+  padding: 16px 16px 30px 16px;
   display: grid;
   grid-template-rows: 220px 288px;
 }
 
 #project-img1 {
   background-image: url('../images/project-1.png');
+  background-size: 100% 100%;
 }
 
 #project-img2 {
   background-image: url('../images/project-2.png');
+  background-size: 100% 100%;
 }
 
 #project-img3 {
   background-image: url('../images/project-3.png');
+  background-size: 100% 100%;
 }
 
 #project-img4 {
   background-image: url('../images/project-4.png');
+  background-size: 100% 100%;
 }
 
 .project h2 {
@@ -428,24 +433,20 @@ input[type=submit]:active {
 
   #project-img1 {
     background-image: url('../images/desktop-1.png');
-    background-size: 100% 100%;
   }
 
   #project-img2 {
     background-image: url('../images/desktop-2.png');
-    background-size: 100% 100%;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
   }
 
   #project-img3 {
     background-image: url('../images/desktop-3.png');
-    background-size: 100% 100%;
   }
 
   #project-img4 {
     background-image: url('../images/desktop-4.png');
-    background-size: 100% 100%;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
   }
@@ -492,5 +493,29 @@ input[type=submit]:active {
 
   .tech p {
     margin-left: 0;
+  }
+
+  .footer-content {
+    padding: 135px 34.5%;
+    background-image: url('../images/desktop-footer.png');
+    background-size: 90% 85%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  input[type=text],
+  input[type='email'],
+  textarea {
+    border-radius: 0;
+  }
+
+  input[type=submit] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-content img {
+    display: none;
   }
 }
