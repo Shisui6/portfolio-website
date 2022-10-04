@@ -9,7 +9,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://shisui6.github.io/portfolio-website/)
+![image](https://user-images.githubusercontent.com/37116322/93861800-abf1bbf5-e9ce-4054-97aa-4e63f3c678b5.png)
 
 ## Getting Started
 
@@ -30,6 +30,10 @@ To get a local copy up and running follow these simple steps.
 ### Usage
 
 - Open the index file and enjoy
+
+### Deployment
+
+- [Live Demo Link](https://shisui6.github.io/portfolio-website/)
 
 ## Authors
 
