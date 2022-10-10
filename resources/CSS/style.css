@@ -74,6 +74,14 @@ header li a {
   margin-right: 0;
 }
 
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
 .menu {
   height: 100vh;
   background-color: rgba(80, 93, 214, 0.7);
@@ -85,7 +93,7 @@ header li a {
   padding-left: 28px;
 }
 
-.fa-x {
+#cross {
   float: right;
   margin-right: 38px;
   margin-top: 62px;
@@ -457,6 +465,10 @@ input[type='submit']:active {
 /* Media Queries */
 
 @media screen and (min-width: 768px) {
+  .menu {
+    display: none;
+  }
+
   header {
     padding: 25px 12%;
     justify-content: space-between;
