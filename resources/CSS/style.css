@@ -74,6 +74,40 @@ header li a {
   margin-right: 0;
 }
 
+.menu {
+  height: 100vh;
+  background-color: rgba(80, 93, 214, 0.7);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  backdrop-filter: blur(5px);
+  padding-left: 28px;
+}
+
+.fa-x {
+  float: right;
+  margin-right: 38px;
+  margin-top: 62px;
+  color: #fff;
+}
+
+.menu ul {
+  margin-top: 106px;
+}
+
+.menu li {
+  margin-bottom: 20px;
+}
+
+.menu a {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+  color: #fff;
+  text-decoration: none;
+}
+
 /* Intro Section */
 
 .intro-section {
