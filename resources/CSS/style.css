@@ -70,8 +70,68 @@ header li a {
   color: #344563;
 }
 
+header li a.active {
+  color: #6070ff;
+  font-weight: bold;
+}
+
 .last {
   margin-right: 0;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.menu {
+  background-color: rgba(67, 78, 178, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  backdrop-filter: blur(6px);
+  padding-left: 28px;
+  opacity: 0;
+  animation: fadeIn 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#close {
+  float: right;
+  margin-right: 38px;
+  margin-top: 62px;
+  color: #fff;
+}
+
+.menu ul {
+  margin-top: -200px;
+  animation: animateTop 1.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes animateTop {
+  100% {
+    margin-top: 106px;
+  }
+}
+
+.menu li {
+  margin-bottom: 20px;
+}
+
+.menu a {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Intro Section */
