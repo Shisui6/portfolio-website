@@ -70,6 +70,11 @@ header li a {
   color: #344563;
 }
 
+header li a.active {
+  color: #6070ff;
+  font-weight: bold;
+}
+
 .last {
   margin-right: 0;
 }
@@ -83,17 +88,21 @@ header li a {
 }
 
 .menu {
-  height: 100vh;
-  background-color: rgba(80, 93, 214, 0.7);
-  position: absolute;
+  background-color: rgba(67, 78, 178, 0.6);
+  position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;
+  bottom: 0;
+  right: 0;
   z-index: 1;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(6px);
   padding-left: 28px;
+  opacity: 0;
+  animation: fadeIn 0.5s;
+  animation-fill-mode: forwards;
 }
 
-#cross {
+#close {
   float: right;
   margin-right: 38px;
   margin-top: 62px;
@@ -101,7 +110,16 @@ header li a {
 }
 
 .menu ul {
-  margin-top: 106px;
+  margin-top: -200px;
+  animation: animateTop 1.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes animateTop {
+  100% {
+    margin-top: 106px;
+  }
 }
 
 .menu li {
@@ -465,10 +483,6 @@ input[type='submit']:active {
 /* Media Queries */
 
 @media screen and (min-width: 768px) {
-  .menu {
-    display: none;
-  }
-
   header {
     padding: 25px 12%;
     justify-content: space-between;

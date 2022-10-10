@@ -1,18 +1,22 @@
-let hamgurger=document.getElementById("hamgurger-icon");
+//Declare Variables
+let menuButton = document.getElementById("menu-button");
 let menu = document.getElementById("menu-id");
-let cross = document.getElementById("cross");
+let closeButton = document.getElementById("close");
 
+//Create event listener functions
 function showMenu () {
-menu.classList.replace("hide", "show");
-document.body.style.overflow = "hidden"
+    menu.classList.replace("hide", "show");
 }
-
-hamgurger.addEventListener("click", showMenu);
 
 function hideMenu () {
     menu.classList.replace("show", "hide");
-    document.body.style.overflow = ""
-    }
+}
 
-cross.addEventListener("click",hideMenu)
+//Add event listeners to html elements
+menuButton.addEventListener("click", showMenu);
+closeButton.addEventListener("click", hideMenu)
 
+let menuItems = document.getElementsByClassName("menu-item");
+for (let i = 0; i < menuItems.length; i++) {
+    menuItems[i].addEventListener("click", hideMenu)
+}
