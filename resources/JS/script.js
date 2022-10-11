@@ -43,38 +43,37 @@ window.onscroll = () => {
   }
 };
 
-let projects = [
-    {
-        name: 'Tonic',
-        description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-        image: './resources/images/desktop-1.png',
-        technologies: ['html', 'css', 'javascript'],
-        live: '',
-        source: ''
-    },
-    {
-        name: 'Multi-Post Stories',
-        description: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
-        image: './resources/images/desktop-2.png',
-        technologies: ['html', 'css', 'javascript'],
-        live: '',
-        source: ''
-    },
-    {
-        name: 'Tonic',
-        description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-        image: './resources/images/desktop-3.png',
-        technologies: ['html', 'css', 'javascript'],
-        live: '',
-        source: ''
-    },
-    {
-        name: 'Multi-Post Stories',
-        description: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
-        image: './resources/images/desktop-4.png',
-        technologies: ['html', 'css', 'javascript'],
-        live: '',
-        source: ''
-    }
+const projects = [
+  {
+    name: 'Tonic',
+    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    image: './resources/images/desktop-1.png',
+    technologies: ['html', 'css', 'javascript'],
+    live: '',
+    source: '',
+  },
+  {
+    name: 'Multi-Post Stories',
+    description: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
+    image: './resources/images/desktop-2.png',
+    technologies: ['html', 'css', 'javascript'],
+    live: '',
+    source: '',
+  },
+  {
+    name: 'Tonic',
+    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    image: './resources/images/desktop-3.png',
+    technologies: ['html', 'css', 'javascript'],
+    live: '',
+    source: '',
+  },
+  {
+    name: 'Multi-Post Stories',
+    description: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
+    image: './resources/images/desktop-4.png',
+    technologies: ['html', 'css', 'javascript'],
+    live: '',
+    source: '',
+  },
 ];
-
