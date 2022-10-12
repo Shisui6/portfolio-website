@@ -178,40 +178,39 @@ for (let i = 0; i < popupButtons.length; i += 1) {
   });
 }
 
-function showMessage (input, message, type) {
-  const msg = input.parentNode.querySelector("small");
-  const emailInput = document.getElementById('email')
+// Function to show error message
+function showMessage(input, message) {
+  const msg = input.parentNode.querySelector('small');
   msg.innerText = message;
-  
-  // update the class for the input
-	msg.className = 'error'
-  emailInput.className = 'error-box'
+  msg.className = 'error';
 }
 
+// Function to pass error message to showMessage function
 function showError(input, message) {
-	return showMessage(input, message, false);
+  return showMessage(input, message);
 }
 
+// Function to validate email address
 function validateEmail(input, invalidMsg) {
-	const email = input.value.trim();
+  const email = input.value.trim();
   if (!(email === String(email).toLowerCase())) {
     return showError(input, invalidMsg);
   }
-  return true
+  return true;
 }
 
-const form = document.querySelector("#form-id");
+// Select form element using form id
+const form = document.querySelector('#form-id');
 
-const EMAIL_INVALID = "Enter email in lowercase";
+// Default email error message
+const errorMessage = 'Enter email in lowercase';
 
-form.addEventListener("submit", function (event) {
-	// stop form submission
-	event.preventDefault();
+// Add submit event listener to form
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
 
-	// validate the form
-	let emailValid = validateEmail(form.elements["email"], EMAIL_INVALID);
-	// if valid, submit the form.
-	if (emailValid) {
-		form.submit();
-	}
+  const emailValid = validateEmail(form.elements.email, errorMessage);
+  if (emailValid) {
+    form.submit();
+  }
 });
