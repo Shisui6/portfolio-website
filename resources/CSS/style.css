@@ -204,12 +204,17 @@ header li a.active {
   background-color: #fff;
   border-radius: 16px;
   padding: 16px;
+  padding-bottom: 35px;
   overflow-y: auto;
   height: 100%;
 }
 
 #popup-img {
   height: 220px;
+}
+
+#popup-close {
+  cursor: pointer;
 }
 
 .popup p {
@@ -362,6 +367,7 @@ header li a.active {
   border: 1px solid #6070ff;
   border-radius: 8px;
   padding: 12px;
+  cursor: pointer;
 }
 
 .pro-res:hover {

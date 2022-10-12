@@ -43,37 +43,137 @@ window.onscroll = () => {
   }
 };
 
+// Create projects array
 const projects = [
   {
     name: 'Tonic',
-    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    image: './resources/images/desktop-1.png',
+    mobileDesc: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    desktopDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
+    image: '<img src="./resources/images/desktop-1.png" alt="project-one" class="project-img hov-img">',
+    popupImage: '<img src="./resources/images/desktop-1.png" alt="project" class="project-img" id="popup-img">',
     technologies: ['html', 'css', 'javascript'],
     live: '',
     source: '',
   },
   {
     name: 'Multi-Post Stories',
-    description: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
-    image: './resources/images/desktop-2.png',
+    mobileDesc: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
+    desktopDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
+    image: '<img src="./resources/images/desktop-2.png" alt="project-two" class="project-img hov-img" id="project-img2">',
+    popupImage: '<img src="./resources/images/desktop-2.png" alt="project" class="project-img" id="popup-img">',
     technologies: ['html', 'css', 'javascript'],
     live: '',
     source: '',
   },
   {
     name: 'Tonic',
-    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    image: './resources/images/desktop-3.png',
+    mobileDesc: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    desktopDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
+    image: '<img src="./resources/images/desktop-3.png" alt="project-three" class="project-img hov-img">',
+    popupImage: '<img src="./resources/images/desktop-3.png" alt="project" class="project-img" id="popup-img">',
     technologies: ['html', 'css', 'javascript'],
     live: '',
     source: '',
   },
   {
     name: 'Multi-Post Stories',
-    description: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
-    image: './resources/images/desktop-4.png',
+    mobileDesc: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
+    desktopDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
+    image: '<img src="./resources/images/desktop-4.png" alt="project-four" class="project-img hov-img" id="project-img4">',
+    popupImage: '<img src="./resources/images/desktop-4.png" alt="project" class="project-img" id="popup-img">',
     technologies: ['html', 'css', 'javascript'],
     live: '',
     source: '',
   },
 ];
+
+// Select portfolio section of html document
+const portfolio = document.getElementById('portfolio');
+
+// Loop through each project and create a new project div and append it to the portfolio section
+projects.forEach((element) => {
+  const project = document.createElement('div');
+  project.className = 'project';
+  project.innerHTML = `
+    ${element.image}
+    <div>
+      <h2>${element.name}</h2>
+      <div class="project-type">
+        <h3 class="text-font">CANOPY</h3>
+        <img src="./resources/images/counter.svg" alt="counter" />
+        <h4 class="text-font">Back End Dev</h4>
+        <img src="./resources/images/counter.svg" alt="counter" />
+        <h4 class="text-font">2015</h4>
+      </div>
+      <p>
+        ${element.mobileDesc}
+      </p>
+      <ul>
+        <li>${element.technologies[0]}</li>
+        <li>${element.technologies[1]}</li>
+        <li>${element.technologies[2]}</li>
+      </ul>
+      <button class="pro-res popup-button">See Project</button>
+    </div>
+  `;
+  portfolio.appendChild(project);
+});
+
+// Function to show popup window when see project button is clicked
+function showPopup(number) {
+  const popup = document.createElement('div');
+  popup.className = 'popup';
+  popup.id = 'popup-id';
+  popup.innerHTML = `
+    <div class="popup-card">
+      <div class="flex">
+        <h2>${projects[number].name}</h2>
+        <button id="popup-close">
+          <i class="fa-solid fa-x"></i>
+        </button>
+      </div>
+      <div class="project-type popup-type">
+        <h3 class="text-font">CANOPY</h3>
+        <img src="./resources/images/counter.svg" alt="counter" />
+        <h4 class="text-font">Back End Dev</h4>
+        <img src="./resources/images/counter.svg" alt="counter" />
+        <h4 class="text-font">2015</h4>
+      </div>
+      ${projects[number].popupImage}
+      <div class="popup-bottom">
+        <div class="popup-text">
+          <p>${projects[number].desktopDesc}</p>
+        </div>
+        <div>
+          <ul>
+            <li>${projects[number].technologies[0]}</li>
+            <li>${projects[number].technologies[1]}</li>
+            <li>${projects[number].technologies[2]}</li>
+          </ul>
+          <hr>
+          <div class="center">
+            <a href="#" class="pro-res right">See Live <img src="./resources/images/live.svg" alt="live"></a>
+            <a href="#" class="pro-res">See Source <img src="./resources/images/source.svg" alt="source"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  portfolio.appendChild(popup);
+
+  // Create event listener for close button to remove the popup window on click
+  const popupClose = document.getElementById('popup-close');
+  popupClose.addEventListener('click', () => {
+    const popup = document.getElementById('popup-id');
+    portfolio.removeChild(popup);
+  });
+}
+
+// Select all the see project buttons and add a click event to call the show popup function
+// with the correct index
+const popupButtons = document.getElementsByClassName('popup-button');
+for (let i = 0; i < popupButtons.length; i += 1) {
+  popupButtons[i].addEventListener('click', () => {
+    showPopup(i);
+  });
+}
