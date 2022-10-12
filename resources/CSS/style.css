@@ -563,6 +563,14 @@ input[type='submit']:active {
   color: #fff;
 }
 
+.error {
+  color: red;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  margin-top: 20px;
+}
+
 /* Media Queries */
 
 @media screen and (min-width: 768px) {

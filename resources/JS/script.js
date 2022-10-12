@@ -177,3 +177,40 @@ for (let i = 0; i < popupButtons.length; i += 1) {
     showPopup(i);
   });
 }
+
+// Function to show error message
+function showMessage(input, message) {
+  const msg = input.parentNode.querySelector('small');
+  msg.innerText = message;
+  msg.className = 'error';
+}
+
+// Function to pass error message to showMessage function
+function showError(input, message) {
+  return showMessage(input, message);
+}
+
+// Function to validate email address
+function validateEmail(input, invalidMsg) {
+  const email = input.value.trim();
+  if (!(email === String(email).toLowerCase())) {
+    return showError(input, invalidMsg);
+  }
+  return true;
+}
+
+// Select form element using form id
+const form = document.querySelector('#form-id');
+
+// Default email error message
+const errorMessage = 'Enter email in lowercase';
+
+// Add submit event listener to form
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const emailValid = validateEmail(form.elements.email, errorMessage);
+  if (emailValid) {
+    form.submit();
+  }
+});
