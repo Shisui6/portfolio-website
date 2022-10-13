@@ -223,9 +223,9 @@ const formData = {
 };
 
 // Get reference to each form input element
-const nameInput = document.getElementById('fname');
+const nameInput = document.getElementById('Name');
 const emailInput = document.getElementById('email');
-const textInput = document.getElementById('textarea');
+const textInput = document.getElementById('message');
 
 // Add event listeners to each input element to update local storage on input change
 nameInput.addEventListener('input', () => {
@@ -248,7 +248,7 @@ if (localStorage.getItem('data')) {
   let formObject = localStorage.getItem('data');
   formObject = JSON.parse(formObject);
 
-  document.getElementById('fname').value = formObject.name;
+  document.getElementById('Name').value = formObject.name;
   document.getElementById('email').value = formObject.email;
-  document.getElementById('textarea').value = formObject.message;
+  document.getElementById('message').value = formObject.message;
 }
