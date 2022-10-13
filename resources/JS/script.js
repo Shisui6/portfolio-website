@@ -215,28 +215,40 @@ form.addEventListener('submit', (event) => {
   }
 });
 
-
-let formData = {
+// Create form data object
+const formData = {
   name: '',
   email: '',
-  message: ''
-}
+  message: '',
+};
 
-let nameInput = document.getElementById('fname');
-let emailInput = document.getElementById('email');
-let textInput = document.getElementById('textarea')
+// Get reference to each form input element
+const nameInput = document.getElementById('fname');
+const emailInput = document.getElementById('email');
+const textInput = document.getElementById('textarea');
 
+// Add event listeners to each input element to update local storage on input change
 nameInput.addEventListener('input', () => {
   formData.name = nameInput.value;
-  localStorage.setItem('data', JSON.stringify(formData))
+  localStorage.setItem('data', JSON.stringify(formData));
 });
 
 emailInput.addEventListener('input', () => {
   formData.email = emailInput.value;
-  localStorage.setItem('data', JSON.stringify(formData))
+  localStorage.setItem('data', JSON.stringify(formData));
 });
 
 textInput.addEventListener('input', () => {
   formData.message = textInput.value;
-  localStorage.setItem('data', JSON.stringify(formData))
+  localStorage.setItem('data', JSON.stringify(formData));
 });
+
+// Use local storage data to fill form inputs
+if (localStorage.getItem('data')) {
+  let formObject = localStorage.getItem('data');
+  formObject = JSON.parse(formObject);
+
+  document.getElementById('fname').value = formObject.name;
+  document.getElementById('email').value = formObject.email;
+  document.getElementById('textarea').value = formObject.message;
+}
