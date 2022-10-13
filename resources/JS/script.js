@@ -214,3 +214,41 @@ form.addEventListener('submit', (event) => {
     form.submit();
   }
 });
+
+// Create form data object
+const formData = {
+  name: '',
+  email: '',
+  message: '',
+};
+
+// Get reference to each form input element
+const nameInput = document.getElementById('Name');
+const emailInput = document.getElementById('email');
+const textInput = document.getElementById('message');
+
+// Add event listeners to each input element to update local storage on input change
+nameInput.addEventListener('input', () => {
+  formData.name = nameInput.value;
+  localStorage.setItem('data', JSON.stringify(formData));
+});
+
+emailInput.addEventListener('input', () => {
+  formData.email = emailInput.value;
+  localStorage.setItem('data', JSON.stringify(formData));
+});
+
+textInput.addEventListener('input', () => {
+  formData.message = textInput.value;
+  localStorage.setItem('data', JSON.stringify(formData));
+});
+
+// Use local storage data to fill form inputs
+if (localStorage.getItem('data')) {
+  let formObject = localStorage.getItem('data');
+  formObject = JSON.parse(formObject);
+
+  document.getElementById('Name').value = formObject.name;
+  document.getElementById('email').value = formObject.email;
+  document.getElementById('message').value = formObject.message;
+}
